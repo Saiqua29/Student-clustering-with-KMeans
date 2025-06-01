@@ -125,16 +125,18 @@ This script is a complete end-to-end pipeline for:
     -- Clarity: Prevents map clutter and overlap since student markers are already dense.       
 
 💡 **Future Scope of work**
+
     -- Deploy Map Online 
 
 ## Conclusion
 
 This project demonstrates the application of KMeans clustering in solving real world problems. Following skills are demonstarted in this project:
-  -- Getting latitude & longitude of any location using *geopy*
-  -- Pulling real time data via API (*webscraping*)
-  -- Machine learning algorithm of unsupervised learning( *KMeans*)
-  -- Measuring geodesic distance from each venue to all cluster centroids (*geodesic*)
-  -- Generating an interactive Map (*Folium*)
+
+    -- Getting latitude & longitude of any location using *geopy*
+    -- Pulling real time data via API (*webscraping*)
+    -- Machine learning algorithm of unsupervised learning( *KMeans*)
+    -- Measuring geodesic distance from each venue to all cluster centroids (*geodesic*)
+    -- Generating an interactive Map (*Folium*)
   
 ## Author - Saiqua29 
 
