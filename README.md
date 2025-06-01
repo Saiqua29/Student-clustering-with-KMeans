@@ -3,7 +3,8 @@
 ## Project Overview
 
 **Project Title**: Student Clustering With KMeans & providing real time restaurant recommendations
-**Level**: Intermediate  
+
+    **Level**: Intermediate  
 
 This project demonstrates the implementation of KMeans Clustering (an unsupervised machine learning algorithm) to make student clusters based on similar eating and spending habits, and then creating a map of their locality with libraries like geopy for geolocation and distance calculations. Using API to get realtime restaurant infomation, we then show nearby restaurants to the students matching their habits. All of the coding is done in Python. 
 
