@@ -16,27 +16,27 @@ This script is a complete end-to-end pipeline for:
 **Clustering Students Based on Lifestyle and Recommending Nearby Food Venues (in Thane,Mumbai, Maharashtra).**
 
 
-    ✅ *Summary of What the Code Does*
+ ✅ *Summary of What the Code Does*
 
-    1.  Uses Geolocation and the Foursquare API to pull food venues around Thane.
+1.  Uses Geolocation and the Foursquare API to pull food venues around Thane.
 
-    2.  Simulates 1000 students with lifestyle attributes like eating frequency, spending capacity, and food preference.
+ 2.  Simulates 1000 students with lifestyle attributes like eating frequency, spending capacity, and food preference.
 
-    3. Performs KMeans clustering on student behavior (eating out and spending).
+ 3. Performs KMeans clustering on student behavior (eating out and spending).
 
-    4. Removes outliers using the IQR method.
+4. Removes outliers using the IQR method.
 
-    5. Uses Elbow Method to decide the optimal number of clusters (in this case, k = 4).
+5. Uses Elbow Method to decide the optimal number of clusters (in this case, k = 4).
 
-    6. Maps each student and venue to a cluster.
+6. Maps each student and venue to a cluster.
 
-    7. Creates an interactive map showing:
+7. Creates an interactive map showing:
 
-        - **Clustered students**
+ - Clustered students
 
-        - **Recommended venues for each group**
+ - Recommended venues for each group
 
-        - **Cluster centroids**
+ - Cluster centroids
 
 📦 **Key Libraries Used**
 | Library                  | Purpose                                          |
