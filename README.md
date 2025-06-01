@@ -34,9 +34,9 @@ This script is a complete end-to-end pipeline for:
 
         - **Clustered students**
 
-        - **Recommended venues for each group*
+        - **Recommended venues for each group**
 
-        - **Cluster centroids*
+        - **Cluster centroids**
 
 📦 **Key Libraries Used**
 | Library                  | Purpose                                          |
@@ -51,13 +51,13 @@ This script is a complete end-to-end pipeline for:
 🔍 **Explanation**
 1. Get Location Coordinates for Thane
 
-       -- Uses geopy.Nominatim to fetch the latitude and longitude of "Thane West".
+       - Uses geopy.Nominatim to fetch the latitude and longitude of "Thane West".
 
 2. Pull Food Venues via Foursquare API
 
-       -- Makes a GET request to fetch 20 places within a 2 km radius around Thane.
+       - Makes a GET request to fetch 20 places within a 2 km radius around Thane.
 
-       -- Stores venue name, latitude, longitude, and category.
+       - Stores venue name, latitude, longitude, and category.
 
 3. Simulate Student Data
 
