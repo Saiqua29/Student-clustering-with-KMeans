@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-**Project Title**: Student Clustering With KMeans & providing real time restaurant recommendations
+    **Project Title**: Student Clustering With KMeans & providing real time restaurant recommendations
 
     **Level**: Intermediate  
 
@@ -48,7 +48,7 @@ This script is a complete end-to-end pipeline for:
 | `geopy`                  | Geolocation and distance calculations            |
 | `requests`               | API calls to fetch real venue data               |
 
-🔍 **Step-by-Step Breakdown**
+🔍 **Explanation**
 1. Get Location Coordinates for Thane
 
        -- Uses geopy.Nominatim to fetch the latitude and longitude of "Thane West".
