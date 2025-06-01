@@ -13,11 +13,13 @@ This project demonstrates the implementation of KMeans Clustering (an unsupervis
 
 This script is a complete end-to-end pipeline for:
 **Clustering Students Based on Lifestyle and Recommending Nearby Food Venues (in Thane,Mumbai, Maharashtra).**
-✅ *Summary of What the Code Does*
 
-   1.  Uses Geolocation and the Foursquare API to pull food venues around Thane.
 
-   2.  Simulates 1000 students with lifestyle attributes like eating frequency, spending capacity, and food preference.
+    ✅ *Summary of What the Code Does*
+
+    1.  Uses Geolocation and the Foursquare API to pull food venues around Thane.
+
+    2.  Simulates 1000 students with lifestyle attributes like eating frequency, spending capacity, and food preference.
 
     3. Performs KMeans clustering on student behavior (eating out and spending).
 
@@ -48,13 +50,13 @@ This script is a complete end-to-end pipeline for:
 🔍 **Step-by-Step Breakdown**
 1. Get Location Coordinates for Thane
 
-    -- Uses geopy.Nominatim to fetch the latitude and longitude of "Thane West".
+       -- Uses geopy.Nominatim to fetch the latitude and longitude of "Thane West".
 
 2. Pull Food Venues via Foursquare API
 
-    -- Makes a GET request to fetch 20 places within a 2 km radius around Thane.
+       -- Makes a GET request to fetch 20 places within a 2 km radius around Thane.
 
-    -- Stores venue name, latitude, longitude, and category.
+       -- Stores venue name, latitude, longitude, and category.
 
 3. Simulate Student Data
 
@@ -70,31 +72,31 @@ This script is a complete end-to-end pipeline for:
 
 4. Encode Categorical Data
 
-    -- Converts food preference into numeric format to prepare for clustering.
+       -- Converts food preference into numeric format to prepare for clustering.
 
 5. Normalize Features & Remove Outliers
 
-    -- Uses StandardScaler to normalize spending and frequency.
+       -- Uses StandardScaler to normalize spending and frequency.
 
-    -- Uses IQR to remove outlier students for more accurate clustering.
+       -- Uses IQR to remove outlier students for more accurate clustering.
 
 6. Find Best Number of Clusters (Elbow Method)
 
-    -- Computes "inertia" for k = 1 to k = 10.
+       -- Computes "inertia" for k = 1 to k = 10.
 
-    -- Elbow plot helps visually identify the point of diminishing returns (chosen k = 4).
+       -- Elbow plot helps visually identify the point of diminishing returns (chosen k = 4).
 
 7. Perform KMeans Clustering
 
-    -- Assigns each student to one of 4 clusters.
+       -- Assigns each student to one of 4 clusters.
 
-    -- Plots students on a 2D scatter plot with cluster centroids.
+       -- Plots students on a 2D scatter plot with cluster centroids.
 
 8. Map Venues to Clusters
 
-    -- Calculates the geodesic distance from each venue to all cluster centroids.
+       -- Calculates the geodesic distance from each venue to all cluster centroids.
 
-    -- Assigns each venue to the nearest student cluster.
+       -- Assigns each venue to the nearest student cluster.
 
 9. Generate Interactive Map (Folium)
 
