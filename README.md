@@ -51,95 +51,95 @@ This script is a complete end-to-end pipeline for:
 🔍 **Explanation**
 1. Get Location Coordinates for Thane
 
-       - Uses geopy.Nominatim to fetch the latitude and longitude of "Thane West".
+   - Uses geopy.Nominatim to fetch the latitude and longitude of "Thane West".
 
 2. Pull Food Venues via Foursquare API
 
-       - Makes a GET request to fetch 20 places within a 2 km radius around Thane.
+   - Makes a GET request to fetch 20 places within a 2 km radius around Thane.
 
-       - Stores venue name, latitude, longitude, and category.
+   - Stores venue name, latitude, longitude, and category.
 
 3. Simulate Student Data
 
     Creates simulated data of 1000 students with following features:
 
-        -- Frequency_of_Eating_Out: [1–10]
+   - Frequency_of_Eating_Out: [1–10]
 
-        -- Spending_Capacity: ₹100–₹1000
+   - Spending_Capacity: ₹100–₹1000
 
-        -- Food_Preference: Veg, Non-Veg, Vegan
+   - Food_Preference: Veg, Non-Veg, Vegan
 
     All students are assigned the same location (Thane,Mumbai) to showcase how students of one area(like from one school/college/coaching) would decide to eat out.
 
 4. Encode Categorical Data
 
-       -- Converts food preference into numeric format to prepare for clustering.
+    - Converts food preference into numeric format to prepare for clustering.
 
 5. Normalize Features & Remove Outliers
 
-       -- Uses StandardScaler to normalize spending and frequency.
+   - Uses StandardScaler to normalize spending and frequency.
 
-       -- Uses IQR to remove outlier students for more accurate clustering.
+   - Uses IQR to remove outlier students for more accurate clustering.
 
 6. Find Best Number of Clusters (Elbow Method)
 
-       -- Computes "inertia" for k = 1 to k = 10.
+   - Computes "inertia" for k = 1 to k = 10.
 
-       -- Elbow plot helps visually identify the point of diminishing returns (chosen k = 4).
+   - Elbow plot helps visually identify the point of diminishing returns (chosen k = 4).
 
 7. Perform KMeans Clustering
 
-       -- Assigns each student to one of 4 clusters.
+   - Assigns each student to one of 4 clusters.
 
-       -- Plots students on a 2D scatter plot with cluster centroids.
+   - Plots students on a 2D scatter plot with cluster centroids.
 
 8. Map Venues to Clusters
 
-       -- Calculates the geodesic distance from each venue to all cluster centroids.
+   - Calculates the geodesic distance from each venue to all cluster centroids.
 
-       -- Assigns each venue to the nearest student cluster.
+   - Assigns each venue to the nearest student cluster.
 
 9. Generate Interactive Map (Folium)
 
     Plots:
 
-       --  Students as colored circle markers (per cluster)
+   - Students as colored circle markers (per cluster)
 
-        -- Venues as icons (colored based on assigned cluster)
+   - Venues as icons (colored based on assigned cluster)
 
-        -- Cluster centroids as black markers
+   - Cluster centroids as black markers
 
 📍 **Final Output**
 
-    Saves an HTML file students_restaurants_map.html.
+   Saves an HTML file students_restaurants_map.html.
 
-    You can open it in a browser to explore:
+   You can open it in a browser to explore:
 
-        --  Which food places are recommended for which type of student cluster.
+   - Which food places are recommended for which type of student cluster.
 
-        -- Geographic distribution of clusters (currently all centralized in Thane but extendable).
+   - Geographic distribution of clusters (currently all centralized in Thane but extendable).
 
  💡 **Why use restaurant cluster centroids?**
 
-    -- Represents variety: Restaurants are more spatially spread out.
+   - Represents variety: Restaurants are more spatially spread out.
 
-    -- Actionable information: Students can see where the main hubs of restaurant clusters are.
+   - Actionable information: Students can see where the main hubs of restaurant clusters are.
 
-    -- Clarity: Prevents map clutter and overlap since student markers are already dense.       
+   - Clarity: Prevents map clutter and overlap since student markers are already dense.       
 
 💡 **Future Scope of work**
 
-    -- Deploy Map Online 
+   - Deploy Map Online 
 
 ## Conclusion
 
 This project demonstrates the application of KMeans clustering in solving real world problems. Following skills are demonstarted in this project:
 
-    -- Getting latitude & longitude of any location using *geopy*
-    -- Pulling real time data via API (*webscraping*)
-    -- Machine learning algorithm of unsupervised learning( *KMeans*)
-    -- Measuring geodesic distance from each venue to all cluster centroids (*geodesic*)
-    -- Generating an interactive Map (*Folium*)
+   - Getting latitude & longitude of any location using *geopy*
+   - Pulling real time data via API (*webscraping*)
+   - Machine learning algorithm of unsupervised learning( *KMeans*)
+   - Measuring geodesic distance from each venue to all cluster centroids (*geodesic*)
+   - Generating an interactive Map (*Folium*)
   
 ## Author - Saiqua29 
 
